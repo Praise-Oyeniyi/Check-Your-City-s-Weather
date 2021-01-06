@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 
     function cityValue(value){
-        $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=" + value +"&units=imperial&&APPID=851b9626a44727677ad41978719e22aa",
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + value +"&units=imperial&&APPID=851b9626a44727677ad41978719e22aa",
 
         function(data){
         console.log(data);
@@ -25,7 +25,7 @@ $(document).ready(function() {
     
         var temp = Math.floor(data.main.temp);
         var weather = data.weather[0].main;
-        var icon = 'http://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
+        var icon = 'https://openweathermap.org/img/w/' + data.weather[0].icon + '.png';
     
         $('#city').keyup(function(e){
             if($('#city').val() == ''/* || $('#city').val() !== NaN */){
@@ -39,8 +39,7 @@ $(document).ready(function() {
         });
     
         $('.icon').attr('src', icon);
-        $('.temp').text(temp + ' ^C');
-        $('.weather').text(weather);
+        $('.display').text('It is ' + temp + '*C in ' + value + ' and ' + weather + ' is the cloud.');
     
         });
 
