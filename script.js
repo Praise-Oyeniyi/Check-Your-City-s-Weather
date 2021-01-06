@@ -39,7 +39,7 @@ $(document).ready(function() {
         });
     
         $('.icon').attr('src', icon);
-        $('.display').text('It is ' + temp + '*C in ' + value + ' and ' + weather + ' is the cloud.');
+        $('.display').text('It is ' + temp + '*C in ' + value + '.   Weather: ' + weather + '.');
     
         });
 
