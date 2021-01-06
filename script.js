@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 
     function cityValue(value){
-        $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + value +"&units=imperial&&APPID=851b9626a44727677ad41978719e22aa",
+        $.getJSON("https://api.openweathermap.org/data/2.5/weather?q=" + value +"&units=metric&APPID=851b9626a44727677ad41978719e22aa",
 
         function(data){
         console.log(data);
