@@ -127,7 +127,7 @@ a{
         font-size: 25px;
         width:80%;
         text-align:center;
-        padding:20px;
+        padding:15px;
     }
     .center{
         top:0;
@@ -136,6 +136,6 @@ a{
         width:90%;
     }
     .bottom-left{
-        height: 41%;
+        height:38%;
     }
 };
