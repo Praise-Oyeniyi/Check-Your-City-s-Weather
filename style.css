@@ -123,6 +123,9 @@ a{
     color:#000;
 }
 @media(max-width:500px){
+    section{
+    top:6%;
+    }
     .center p{
         font-size: 25px;
         width:80%;
