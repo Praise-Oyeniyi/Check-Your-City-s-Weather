@@ -39,10 +39,23 @@ $(document).ready(function() {
         });
     
         $('.icon').attr('src', icon);
-        $('.display').text('It is ' + temp + '*C in ' + value + '.   Weather: ' + weather + '.');
-    
+        $('.degree').text(temp + '°C');
+        $('.weather').text(weather);
+        $('.city').text(value);
+
+        
         });
 
     };
-   
+    
+
+    function time(){
+        var options = {weekday: 'long', month:'short', day:'numeric'};
+        var today = new Date();
+        $('.day').text(today.toLocaleDateString('en-us', options));
+
+
+        $('.time').text(today.toLocaleString('en-US', {hour: 'numeric', minute:'numeric', hour12: true }))
+    }
+    setInterval(time, 1000);
 });
